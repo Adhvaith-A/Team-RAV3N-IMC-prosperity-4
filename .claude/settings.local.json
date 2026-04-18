@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(prosperity4btx:*)",
+      "Bash(awk -F';' 'NR>1 && $3==\"INTARIAN_PEPPER_ROOT\" {sum+=$7} END {print \"Day -1 total volume:\", sum}' ROUND_2/trades_round_2_day_-1.csv)",
+      "Bash(awk -F';' 'NR>1 && $3==\"INTARIAN_PEPPER_ROOT\" {sum+=$7} END {print \"Day 0 total volume:\", sum}' ROUND_2/trades_round_2_day_0.csv)",
+      "Bash(awk -F';' 'NR>1 && $3==\"INTARIAN_PEPPER_ROOT\" {sum+=$7} END {print \"Day 1 total volume:\", sum}' ROUND_2/trades_round_2_day_1.csv)"
+    ]
+  }
+}
