@@ -11,7 +11,6 @@ The strategy is built around two distinct behaviors:
 
 - `trader.py` is the active bot.
 - `datamodel.py` provides the Prosperity trading types.
-- `robust_backtest.py` evaluates runs and computes summary metrics.
 - `CODE_DOCUMENTATION.md` explains the code from top to bottom.
 - `Strategy.md` explains the thinking process behind the current design.
 - `LICENSE` describes the viewing-only restrictions for this repository snapshot.
