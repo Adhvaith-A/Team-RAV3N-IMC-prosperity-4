@@ -1,6 +1,6 @@
 # FinoVITa Round 2 Trading Bot
 
-This repository contains the current round-2 IMC Prosperity 4 trading system for the RAV3N team.
+This repository contains the current codebase for the IMC Prosperity 4 trading system by team RAV3N.
 
 The strategy is built around two distinct behaviors:
 
