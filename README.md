@@ -38,7 +38,7 @@ The bot uses a layered approach:
 ## Important Constraints
 
 - Position limit: `80` per product.
-- `bid()` must return `2141`.
+- `bid()` must return `2141` or a positive value, '2141' is specifically meant for a 25% bid.
 - The code is tuned for the round-2 Prosperity environment and is not a general-purpose trading framework.
 
 ## How To Run
