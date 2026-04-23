@@ -4,7 +4,7 @@ This repository contains the current codebase for the IMC Prosperity 4 trading s
 
 # Team Members
 ## Adhvaith Anand
-## Unnabh Majumdhar
+## Unnabh Majumdar
 
 The strategy is built around two distinct behaviors:
 
