@@ -6,7 +6,7 @@ from typing import Any, Optional
 import numpy as np
 import pandas as pd
 
-#TEAM RAV3N: Adhvaith A & Unnabh M
+#TEAM RAV3N : Adhvaith A and Unnabh M
 class Logger:
     def __init__(self) -> None:
         self.logs = ""
@@ -423,7 +423,7 @@ class Trader:
         if volatility >= self.RISK_OFF_VOL_SOFT:
             return 0.78
         return 1.0
-#TEAM RAV3N: Adhvaith A & Unnabh M
+
     def _select_osmium_model(self, data) -> str:
         """Dynamically switch OSMIUM model by volatility/trend regime with hysteresis."""
         if self.AGGRESSIVE_EXPERIMENT:
@@ -1025,7 +1025,6 @@ class Trader:
         # Combine trend velocity with momentary book acceleration.
         predicted_drift = (alpha_signal * 0.9) + (blended_obi * 1.55)
         predicted_drift *= self.RISK_MULTIPLIER
-        #TEAM RAV3N: Adhvaith A & Unnabh M
 
         if "alpha_abs_ema" not in data:
             data["alpha_abs_ema"] = {}
@@ -1299,7 +1298,6 @@ class Trader:
             self._append_iceberg(orders, "INTARIAN_PEPPER_ROOT", optimal_ask, -qty_layer1, chunk=3)
             if qty_layer2 > 0:
                 self._append_iceberg(orders, "INTARIAN_PEPPER_ROOT", optimal_ask + 1, -qty_layer2, chunk=3)
-                #TEAM RAV3N: Adhvaith A & Unnabh M
 
         # 6. Save Persistent State
         data["fast_ema"]["INTARIAN_PEPPER_ROOT"] = fast_ema
@@ -1307,7 +1305,6 @@ class Trader:
         data["pepper_level"]["INTARIAN_PEPPER_ROOT"] = pepper_level
         data["pepper_velocity"]["INTARIAN_PEPPER_ROOT"] = pepper_velocity
         data["pepper_var"]["INTARIAN_PEPPER_ROOT"] = pepper_var
-        #TEAM RAV3N: Adhvaith A & Unnabh M
         if "pepper_kalman_gain" not in data:
             data["pepper_kalman_gain"] = {}
         data["pepper_kalman_gain"]["INTARIAN_PEPPER_ROOT"] = kalman_gain
