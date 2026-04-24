@@ -2,10 +2,7 @@ from datamodel import TradingState, Order
 import math
 import json
 
-# ══════════════════════════════════════════════════════════════════════
-#  TARGET: 400-450k from 250k baseline
-#  
-#  10 IMPROVEMENTS IMPLEMENTED:
+# IMPROVEMENTS IMPLEMENTED:
 #  1. Adaptive drift weighting (regime-aware)
 #  2. Better noise filtering (cascaded EMA)
 #  3. Adaptive execution (dynamic iceberg chunks)
@@ -16,7 +13,6 @@ import json
 #  8. PnL feedback loop (risk scaling)
 #  9. Microprice for Pepper (volume-weighted mid)
 #  10. Imbalance persistence + asymmetric execution
-# ══════════════════════════════════════════════════════════════════════
 
 class Trader:
 
