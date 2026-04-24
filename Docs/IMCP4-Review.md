@@ -1,9 +1,4 @@
-# IMCP4 Code Review - Overall
-
-This is a test document for Round Notes - Which will be transferred to README.md according to dev
-
-This review is a detailed analysis in depth of each Round's Submissions
-
+# IMCP4 Code Review And Rewrite Decision
 
 This review covers current code plus historical/winner references to decide between incremental refactor and full rewrite.
 
@@ -73,9 +68,25 @@ Use a two-track path:
 
 This gives fast iteration without risking the current validated production path.
 
+## Extra Evidence From IMCP3 Rebuild
+
+The isolated IMCP3 round-2 rebuild reinforced a few architecture lessons:
+
+1. Structural products want structural logic.
+- A clean basket-target engine beat the over-engineered IMCP3 baseline.
+- Translation: when a product has a hard synthetic relationship, start with direct spread pricing and simple hedge propagation before layering adaptive filters.
+
+2. Product routers matter.
+- The IMCP3 trader improved once round-1 market making and round-2 basket logic were separated cleanly.
+- The same split would make `trader.py` easier to tune and safer to ablate.
+
+3. A rewrite should preserve per-product simplicity.
+- The current IMCP4 file is strong but densely coupled.
+- A rewrite should keep one orchestrator but move each product into its own signal, target, and execution path.
+
 ## Immediate Action Items
 
-1. Fix [datamodel.py](datamodel.py#L24) constructor fields to match intended schema.
+1. `Completed:` fix [datamodel.py](datamodel.py#L24) constructor fields to match the intended schema.
 2. Create shared product config map and route current logic through it.
 3. Build one-command ablation script for feature toggles.
 4. Move time-window constants into config.
